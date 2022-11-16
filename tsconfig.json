@@ -1,0 +1,55 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "include": [
+    "src/client/**/*",
+    "types",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2020",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@src/*": ["src/*"],
+    },
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error",
+    // tsc를 사용해 .js 파일이 아닌 .d.ts 파일이 생성되었는지 확인
+    "declaration": true,
+    // "emitDeclarationOnly": true,
+    // Babel이 TypeScript 프로젝트의 파일을 안전하게 트랜스파일할 수 있는지 확인
+    "isolatedModules": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "types"
+    ],
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    "outDir": "./build",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "incremental": true
+  }
+}
