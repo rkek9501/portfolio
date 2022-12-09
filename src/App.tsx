@@ -1,61 +1,24 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef, useCallback, useMemo, useEffect } from "react";
 import styled from "styled-components";
+
+import Header from "./components/Header";
+import Icons from "./components/Icons";
+import { AboutMe, Career, Skills, Projects } from "./contents";
 
 const MainContainer = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row;
-  overflow-y: none;
-  @media (min-width: 1px) and (max-width: 480px) {
-    flex-direction: column;
-    overflow-y: scroll;
-    height: 100%;
-  }
-`;
-
-const MainProfileArea = styled.div`
-  height: 100vh;
-  min-width: 270px;
-  transition: 500ms;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .profile-img {
-    width: 100px;
-    height: 100px;
-    background-color: lightgray;
-    border-radius: 50px;
-  }
-  .title {
-    text-align: center;
-    font-size: 40px;
-  }
-
-  @media (min-width: 1px) and (max-width: 480px) {
-    min-width: 100vw;
-    height: 200px;
-  }
+  overflow-y: none;
 `;
-
-const ProfileInfo  = styled.nav`
-  font-size: 24px;
-  min-width: 200px;
-  margin-top: 20px;
-  li a {
-    color: var(--md-ref-palette-primary40);
-  }
-  li a:hover {
-    color: var(--md-ref-palette-primary20);
-  }
-  @media (min-width: 1px) and (max-width: 480px) {
-    display: none;
-  }
+const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  background-color: lightgray;
 `;
-
-const MainContentsArea = styled.div`
+const ContentsAndFooter = styled.div`
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -63,74 +26,131 @@ const MainContentsArea = styled.div`
   flex: 1;
   flex-direction: column;
   scroll-behavior: smooth;
+`;
+const MainContentsArea = styled.div`
+  margin-top: 60px;
+  padding: 0 200px 20px;
   @media (min-width: 1px) and (max-width: 480px) {
-    overflow-y: none ;
+    padding: 0 20px 20px;
+  }
+  @media (min-width: 481px) and (max-width: 1000px) {
+    padding: 0 60px 20px;
   }
 `;
 
-const ContentBox = styled.div`  
+const Footer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  background-color: black;
+  padding: 10px 200px;
+  @media (min-width: 1px) and (max-width: 480px) {
+    padding: 10px 20px;
+  }
+  @media (min-width: 481px) and (max-width: 1000px) {
+    padding: 10px 60px;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 10px;
+  }
+`;
+
+const ContentBox = styled.div`
+  padding: 10px 0 20px;
   width: 100%;
-  min-height: 500px;
-  padding: 10px;
-  #aboutme {
-
+  @media (min-width: 1px) and (max-width: 480px) {
+    padding: 10px 0 20px;
   }
-  #archiving {
-
+  @media (min-width: 481px) and (max-width: 1000px) {
+    padding: 10px 0 20px;
   }
-  #skills {
+`;
 
-  }
-  #projects {
-  
-  }
-  #career {
+const Fab = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
 
+  position: absolute;
+  bottom: 20px;
+  right: 160px;
+  @media (min-width: 1px) and (max-width: 480px) {
+    right: 16px;
+  }
+  @media (min-width: 481px) and (max-width: 1000px) {
+    right: 20px;
   }
 `;
 
 const App = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [hiddenHeader, setHiddenHeader] = useState(false);
   const contentLoaded = useRef(null);
-  const profileWidth = scrolled ? "30vw" : "50vw";
+  const top = useMemo(() => hiddenHeader ? "-60px" : "0", [hiddenHeader]);
 
-  useEffect(() => {
+  const gotoTop = useCallback(() => {
     if (contentLoaded?.current) {
       const scroller = document.getElementById("main-contents");
-      const onScroll = () => {
-        const scrollTop = scroller?.scrollTop || 0;
-        if (scrollTop > 0) setScrolled(true);
-        else setScrolled(false);
-      };
-      scroller?.addEventListener("scroll", onScroll, false);
-      return () => scroller?.removeEventListener("scroll", onScroll, false);
-    } else {
-      return () => {};
+      scroller?.scrollTo(0,0);
+      setHiddenHeader(false);
     }
   }, [contentLoaded]);
 
   return (
     <MainContainer>
-      <MainProfileArea className="surface-variant on-surface-variant-text" style={{ width: profileWidth }}>
-        <div className="profile-img"></div>
-        <div className="title">Doyoung's Space</div>
-        <ProfileInfo>
-          <ul>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#archiving">Archiving</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#career">Career</a></li>
-          </ul>
-        </ProfileInfo>
-      </MainProfileArea>
-      <MainContentsArea id="main-contents" className="primary-text" ref={contentLoaded}>
-        <ContentBox id="aboutme" className="about-me primary-text">About Me</ContentBox>
-        <ContentBox id="archiving" className="my-archive secondary-container on-secondary-container-text">Archiving</ContentBox>
-        <ContentBox id="skills" className="my-skills primary-text">Skills</ContentBox>
-        <ContentBox id="projects" className="my-projects tertiary-container on-tertiary-container-text">Projects</ContentBox>
-        <ContentBox id="career" className="my-career primary-text">Career</ContentBox>
-      </MainContentsArea>
+      <Header top={top} setHiddenHeader={setHiddenHeader} />
+
+      <ContentsAndFooter
+        id="main-contents"
+        ref={contentLoaded}
+        onWheel={(event: any) => {
+          if (event?.nativeEvent?.wheelDelta > 0) {
+            setHiddenHeader(false);
+          } else {
+            setHiddenHeader(true);
+          }
+        }}>
+        <MainContentsArea>
+          <ContentBox id="aboutme" className="about-me">
+            <AboutMe />
+          </ContentBox>
+          <Divider />
+          <ContentBox id="projects" className="my-projects">
+            <Projects/>
+          </ContentBox>
+          <Divider />
+          <ContentBox id="career" className="my-career">
+            <Career/>
+          </ContentBox>
+          <Divider />
+          <ContentBox id="skills" className="my-skills">
+            <Skills/>
+          </ContentBox>
+        </MainContentsArea>
+
+        <Footer>
+          <a href="https://de-er.link/" target="_blank">Blog&nbsp;<Icons.Link size={14}/></a>
+          &nbsp;|&nbsp;
+          <a href="https://github.com/rkek9501" target="_blank">Github&nbsp;<Icons.Link size={14}/></a>
+          &nbsp;|&nbsp;
+          <a href="mailto:rkek9501@gmail.com">rkek9501@gmail.com&nbsp;<Icons.Email size={14}/></a>
+        </Footer>
+      </ContentsAndFooter>
+      <Fab onClick={gotoTop}>
+        <Icons.ArrowUp />
+      </Fab>
     </MainContainer>
   );
 };
