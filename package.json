@@ -1,6 +1,7 @@
 {
   "homepage": "http://rkek9501.github.io/portfolio",
   "name": "portfolio",
+  "author": "Doyoung Jeong",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
