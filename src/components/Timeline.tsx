@@ -69,9 +69,9 @@ const Text = styled.div`
 
 const Timeline = (props: { datas: CareerOfCompanyData[] }) => {
   return <TimelineMainContainer>
-    {props.datas?.map((companyData: CareerOfCompanyData, i: number) => {
+    {props.datas?.slice(0).reverse().map((companyData: CareerOfCompanyData, i: number) => {
       return <Fragment key={i}>
-        {companyData.careers.map((career: CareersData, k: number) => {
+        {companyData.careers?.slice(0).reverse().map((career: CareersData, k: number) => {
           return <Fragment key={k}>
             <TimelineTitleRow>
               <Company>{k === 0 && companyData.company}</Company>
@@ -87,7 +87,7 @@ const Timeline = (props: { datas: CareerOfCompanyData[] }) => {
             <TimelineDataRow>
               <Line />
               <Text>
-                - 담당업무 :<br/>
+                - 담당업무 : <br/>
                 <div className="part">{career.text}</div>
                 {/* <Skills skills={career?.skills} withoutIcon /> */}
               </Text>

@@ -12,7 +12,7 @@ export type CareerOfCompanyData = {
 };
 
 const CareerData: CareerOfCompanyData[]  = [{
-  company: "Cedar",
+  company: "주식회사 시더",
   careers: [{
     label: "안드로이드 기반의 주류 도매사 그룹웨어 앱 개발",
     period: "2018 ~ 2019.06", //period: "2018 ~ 2019.04",
@@ -21,11 +21,11 @@ const CareerData: CareerOfCompanyData[]  = [{
       - 위치 기반의 업무보고 및 결제 화면 개발<br/>
       - 거래처 조회, 거래처의 주문내역 및 배송내역 조회 화면 개발<br/>
       - Google API(Dynamic Maps, Geocoding) 연동<br/>
-      - 도매사 입금문자 수신 앱 리뉴얼<br/>
+      {/* - 도매사 입금문자 수신 앱 리뉴얼<br/> */}
       - 크래시 리포트(Fabric) 연동 및 관리<br/>
         &emsp; (Fabric은 현재 Firebase Crashlytics에 통합됨)<br/>
-      - Googel Play 출시 관리<br/>
-      - 해당 안드로이드 프로젝트의 구조 설계 및 리팩토링<br/>
+      - Googel Play 출시 및 업데이트 관리<br/>
+      - 해당 프로젝트의 구조 설계 및 리팩토링<br/>
     </>,
     skills: ["Java", "Android", "Postman", "Fabric"]
   }, {
@@ -33,8 +33,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     period: "2019.04 ~ 2019.07",
     text: <>
       - 프로젝트 구조 설계<br/>
-      - 주류 주문 및 장바구니 개발<br/>
-      - 주문 통계 조회 개발<br/>
+      - 주류 주문, 장바구니 및 주문 통계 개발<br/>
       - 크래시 리포트 Sentry 연동 및 관리<br/>
     </>,
     skills: ["Javascript", "React-Native", "Expo", "Sentry"]
@@ -43,7 +42,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     period: "2019.06 ~ 2019.07",
     text: <>
       - Slack을 활용한 사내 냉난방기기 제어<br/>
-      - Slack의 메세지 수신시 Arduino를 통해 냉난방 신호 송신<br/>
+      &emsp;(Slack의 메세지 수신시 Arduino를 통해 냉난방 신호 송신)<br/>
     </>,
     skills: ["C#", "Arduino", "Slack"]
   }, {
@@ -65,10 +64,10 @@ const CareerData: CareerOfCompanyData[]  = [{
     </>,
     skills: ["Javascript", "React", "Electron", "Nodejs", "Mysql", "PM2", "Nginx"]
   }, {
-    label: "수협방송 관리 프로젝트",
+    label: "수협은행 방송 솔루션 프로젝트",
     period: "2020.01 ~ 2020.05",
     text: <>
-      - 방송용, 광고용 컨텐츠 업로드 및 관리 기능 개발<br/>
+      - 내부 송출용, 광고용 컨텐츠 업로드 및 관리 기능 개발<br/>
       - 뉴스 기사 데이터 연동<br/>
       - 공공데이터 포털 날씨 API 연동<br/>
     </>,
@@ -78,7 +77,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     period: "2020.05 ~ 2021.04",
     text: <>
       유심개통부터 요금조회, 요금납부 등을 비대면으로 처리하기 위한 키오스크 개발<br/>
-      - 유심(LGU+, 알뜰폰) 개통 기능 개발<br/>
+      - 유심(LGU+, 알뜰폰) (선/후불)개통 기능 개발<br/>
       - LGU+ 내부 API, ESB 연동<br/>
       - 기존 광고 솔루션과 키오스크 페이지 통신 연동<br/>
       - 키오스크와 모듈간 통신 연동<br/>
@@ -87,7 +86,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     </>,
     skills: ["Javascript", "React", "Webpack", "Electron", "Nodejs", "Mysql", "Redis"]
   }, {
-    label: "삼양 공장 내부망 솔루션 리뉴얼",
+    label: "내부망 솔루션 리뉴얼",
     period: "2021.05 ~ 2022.02",
     text: <>
       - 기존 솔루션을 내부망에서 동작하도록 리뉴얼<br/>
@@ -107,7 +106,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     </>,
     skills: ["Javascript", "React", "Cordova", "Nodejs", "AWS", "Mysql", "Mssql"]
   }, {
-    label: "신규 사내 솔루션 개발",
+    label: "신규 솔루션 개발",
     period: "2022.03 ~ 2022.08",
     text: <>
       - Nextjs 기반의 전체적인 관리자용 페이지 개발 담당<br/>
