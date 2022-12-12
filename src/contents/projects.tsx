@@ -64,7 +64,7 @@ const Projects = () => {
     {ProjectDatas.map((project: ProjectType, i: number) => <ProjectContainer key={i}>
       <div className="title" >
         {project.title}
-        {project.img && <img className="project-img" src={project.img}/>}
+        {project.img && <img className="project-img" alt={project.title} src={project.img}/>}
       </div>
 
       <ProjectInfoContainer>

@@ -34,7 +34,7 @@ const InfoContainer = styled.div`
 const AboutMe = () => {
   return <AboutMeContainer>
     <ImageContainer>
-      <img src="https://de-er.link/uploads/user/20221125073941_doyoung.JPG" />
+      <img src="https://de-er.link/uploads/user/20221125073941_doyoung.JPG" alt="profile" />
     </ImageContainer>
     <InfoContainer>
       안녕하세요.<br/>
