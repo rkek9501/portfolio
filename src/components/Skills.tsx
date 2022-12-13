@@ -19,14 +19,15 @@ const SkillTag = styled.span`
   img {
     display: inline-block;
     height: 1.4rem;
+    width: auto;
     max-width: 3rem;
     margin-right: 6px;
     @media (min-width: 1px) and (max-width: 480px) {
-      height: 1.4rem;
+      /* height: 1.4rem; */
       max-width: 2.6rem;
     }
     @media (min-width: 481px) and (max-width: 768px) {
-      height: 1.6rem;
+      /* height: 1.6rem; */
       max-width: 2.8rem;
     }
   }
@@ -48,6 +49,7 @@ export const Skill = (Props: SkillType) => {
   const icon = Props.icon ?? `${Props.name.toLowerCase()}.svg`;
   return <SkillTag>
     {!Props.withoutIcon && <img
+      height="1.4rem"
       alt={Props.name}
       src={`${process.env.PUBLIC_URL}/icons/${icon}`}
       onError={(e: any) => {

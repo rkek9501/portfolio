@@ -20,8 +20,9 @@ const ImageContainer = styled.div`
     margin: 0 10px;
   }
   img {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: auto 100 / 100;
     border-radius: 50px;
   }
 `;
@@ -34,7 +35,12 @@ const InfoContainer = styled.div`
 const AboutMe = () => {
   return <AboutMeContainer>
     <ImageContainer>
-      <img src="https://de-er.link/uploads/user/20221125073941_doyoung.JPG" alt="profile" />
+      <img
+        src="https://de-er.link/uploads/user/20221125073941_doyoung.JPG"
+        alt="profile"
+        width={100}
+        height={100}
+      />
     </ImageContainer>
     <InfoContainer>
       안녕하세요.<br/>

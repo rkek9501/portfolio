@@ -14,6 +14,7 @@ const TimelineMainContainer = styled.div`
   flex-direction: column;
   font-size: 1.6rem;
   padding: 10px 20px;
+  word-break: keep-all;
 `;
 const TimelineTitleRow = styled.div`
   display: flex;
