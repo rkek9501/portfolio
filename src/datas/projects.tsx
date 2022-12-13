@@ -19,14 +19,14 @@ const ProjectDatas: ProjectType[] = [{
   </>,
   github: "https://github.com/rkek9501/deer",
   url: "https://de-er.link",
-  img: `${process.env.PUBLIC_URL}/imgs/deer.png`,
+  img: `${process.env.PUBLIC_URL}/imgs/deer.webp`,
   skills: [
     "Typescript",
     "React", "Nextjs",
     "Nodejs", "Express", "Sqlite",
     "Nginx", "PM2", "AWS(EC2, RDS, Route53, ect...)",
     "Figma", "Github",
-    "Google Developers(Analytics, Search Console)",
+    "Google-Analytics", "Google-Search-Console",
   ]
 }, {
   title: "Doyoung's Space",
@@ -36,7 +36,7 @@ const ProjectDatas: ProjectType[] = [{
   </>,
   github: "https://github.com/rkek9501/portfolio",
   url: "http://rkek9501.github.io/portfolio",
-  img: `${process.env.PUBLIC_URL}/imgs/portfolio.png`,
+  img: `${process.env.PUBLIC_URL}/imgs/portfolio.webp`,
   skills: [
     "Typescript", "React", "Github(Pages)",
     // "Google-Analytics", "Google-Search-Console"
