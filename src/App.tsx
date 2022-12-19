@@ -143,25 +143,25 @@ const App = () => {
 
         <Footer>
           <div onClick={() => {
-            gtag.event({ action: "click_link", category: "click_email", label: "click_email", value: "email" });
+            gtag.event({ action: "click_link", category: "click_email", label: "footer", value: "email" });
           }}>
             <a href="mailto:rkek9501@gmail.com">rkek9501@gmail.com&nbsp;<Icons.Email size={14}/></a>
           </div>
           &nbsp;|&nbsp;
           <div onClick={() => {
-            gtag.event({ action: "click_link", category: "click_phone", label: "click_phone", value: "phone call" });
+            gtag.event({ action: "click_link", category: "click_phone", label: "footer", value: "phone call" });
           }}>
             <a href="tel://+821087471647">010-8747-1647&nbsp;<Icons.Phone size={14}/></a>
           </div>
           &nbsp;|&nbsp;
           <div onClick={() => {
-            gtag.event({ action: "click_link", category: "move_to_blog", label: "move_to_blog", value: "de-er.link" });
+            gtag.event({ action: "click_link", category: "move_to_blog", label: "footer", value: "de-er.link" });
           }}>
             <a href="https://de-er.link/" target="_blank">Blog&nbsp;<Icons.Link size={14}/></a>
           </div>
           &nbsp;|&nbsp;
           <div onClick={() => {
-            gtag.event({ action: "click_link", category: "move_to_github", label: "move_to_github", value: "github" });
+            gtag.event({ action: "click_link", category: "move_to_github", label: "footer", value: "github" });
           }}>
             <a href="https://github.com/rkek9501" target="_blank">Github&nbsp;<Icons.Link size={14}/></a>
           </div>
