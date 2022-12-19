@@ -1,9 +1,9 @@
-import React, { useState, useRef, useCallback, useMemo, useEffect } from "react";
+import React, { useState, useRef, useCallback, useMemo } from "react";
 import styled from "styled-components";
 
-import Header from "./components/Header";
-import Icons from "./components/Icons";
-import { AboutMe, Career, Skills, Projects } from "./contents";
+import Header from "@components/Header";
+import Icons from "@components/Icons";
+import { AboutMe, Career, Skills, Projects } from "@contents/index";
 
 const MainContainer = styled.div`
   width: 100vw;

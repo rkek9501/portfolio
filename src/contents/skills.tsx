@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { SkillData, SkillType } from '../datas/skills';
-import { Skill } from '../components/Skills';
+
+import { SkillData, SkillType } from '@datas/skills';
+import { Skill } from '@components/Skills';
 
 const ContentTitle = styled.div`
   margin: 10px;

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Timeline from '../components/Timeline';
-import Careers from '../datas/careers';
+
+import Timeline from '@components/Timeline';
+import Careers from '@datas/careers';
 
 const ContentsContainer = styled.div`
   display: flex;

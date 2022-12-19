@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import type { SkillType } from '../datas/skills';
+import type { SkillType } from '@datas/skills';
 
 const SkillTag = styled.span`
   display: inline-block;

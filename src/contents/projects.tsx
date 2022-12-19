@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Skills from '../components/Skills';
-import ProjectDatas, { ProjectType } from '../datas/projects';
+import Skills from '@components/Skills';
+import ProjectDatas, { ProjectType } from '@datas/projects';
 
 const ContentsContainer = styled.div`
   display: flex;

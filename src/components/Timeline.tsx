@@ -1,7 +1,8 @@
-import React, { Fragment, ReactElement } from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import Skills from './Skills';
-import type { CareerOfCompanyData, CareersData } from '../datas/careers';
+
+// import Skills from '@compoents/Skills';
+import type { CareerOfCompanyData, CareersData } from '@datas/careers';
 
 const CompanyWidth = {
   pc: "100px",
