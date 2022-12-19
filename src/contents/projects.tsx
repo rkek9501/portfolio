@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Skills from '@components/Skills';
 import ProjectDatas, { ProjectType } from '@datas/projects';
+import * as gtag from "@utils/gtag";
 
 const ContentsContainer = styled.div`
   display: flex;
@@ -83,16 +84,24 @@ const Projects = () => {
 
         {project.github && <div className="description">
           - Github :&nbsp;
-          <a href={project.github} target="_blank">
-            {project.github}
-          </a>
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "move_to_github", label: `project_${project.title}`, value: project.github||"" });
+          }}>
+            <a href={project.github} target="_blank">
+              {project.github}
+            </a>
+          </div>
         </div>}
 
         {project.url && <div className="description">
           - URL :&nbsp;
-          <a href={project.url} target="_blank">
-            {project.url}
-          </a>
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "move_to_link", label: `project_${project.title}`, value: project.url||"" });
+          }}>
+            <a href={project.url} target="_blank">
+              {project.url}
+            </a>
+          </div>
         </div>}
 
         <div className="description">

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "@components/Header";
 import Icons from "@components/Icons";
 import { AboutMe, Career, Skills, Projects } from "@contents/index";
+import * as gtag from "@utils/gtag";
 
 const MainContainer = styled.div`
   width: 100vw;
@@ -141,11 +142,29 @@ const App = () => {
         </MainContentsArea>
 
         <Footer>
-          <a href="https://de-er.link/" target="_blank">Blog&nbsp;<Icons.Link size={14}/></a>
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "click_email", label: "click_email", value: "email" });
+          }}>
+            <a href="mailto:rkek9501@gmail.com">rkek9501@gmail.com&nbsp;<Icons.Email size={14}/></a>
+          </div>
           &nbsp;|&nbsp;
-          <a href="https://github.com/rkek9501" target="_blank">Github&nbsp;<Icons.Link size={14}/></a>
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "click_phone", label: "click_phone", value: "phone call" });
+          }}>
+            <a href="tel://+821087471647">010-8747-1647&nbsp;<Icons.Phone size={14}/></a>
+          </div>
           &nbsp;|&nbsp;
-          <a href="mailto:rkek9501@gmail.com">rkek9501@gmail.com&nbsp;<Icons.Email size={14}/></a>
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "move_to_blog", label: "move_to_blog", value: "de-er.link" });
+          }}>
+            <a href="https://de-er.link/" target="_blank">Blog&nbsp;<Icons.Link size={14}/></a>
+          </div>
+          &nbsp;|&nbsp;
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "move_to_github", label: "move_to_github", value: "github" });
+          }}>
+            <a href="https://github.com/rkek9501" target="_blank">Github&nbsp;<Icons.Link size={14}/></a>
+          </div>
         </Footer>
       </ContentsAndFooter>
       <Fab onClick={gotoTop}>
