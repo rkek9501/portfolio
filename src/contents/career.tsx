@@ -9,7 +9,7 @@ const ContentsContainer = styled.div`
   flex-direction: column;
 `;
 
-const ContentTitle = styled.div`
+const ContentTitle = styled.h1`
   margin: 10px;
   font-size: 2.4rem;
   font-weight: bold;

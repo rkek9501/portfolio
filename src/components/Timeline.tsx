@@ -23,7 +23,7 @@ const TimelineTitleRow = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-const Company = styled.div`
+const Company = styled.h2`
   text-align: right;
   font-weight: bold;
   font-size: 1.6rem;
@@ -42,7 +42,7 @@ const Dot = styled.div`
   background-color: gray;
   margin: 0 10px;
   `;
-const Label = styled.div`
+const Label = styled.h3`
   font-weight: bold;
 `;
 const TimelineDataRow = styled.div`
@@ -61,7 +61,7 @@ const Line = styled.div`
   margin: 0 15px;
   background-color: lightgray;
 `;
-const Text = styled.div`
+const Text = styled.p`
   padding-left: 16px;
   padding-bottom: 10px;
   .part {
@@ -90,7 +90,7 @@ const Timeline = (props: { datas: CareerOfCompanyData[] }) => {
               <Line />
               <Text>
                 - 담당업무 : <br/>
-                <div className="part">{career.text}</div>
+                <p className="part">{career.text}</p>
                 {/* <Skills skills={career?.skills} withoutIcon /> */}
               </Text>
             </TimelineDataRow>

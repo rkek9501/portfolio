@@ -26,7 +26,7 @@ const ImageContainer = styled.div`
     border-radius: 50px;
   }
 `;
-const InfoContainer = styled.div`
+const InfoContainer = styled.p`
   margin-top: 20px;
   font-size: 1.5rem;
   text-align: center;

@@ -39,7 +39,7 @@ const MainContentsArea = styled.div`
   }
 `;
 
-const Footer = styled.div`
+const Footer = styled.footer`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,7 +71,7 @@ const Footer = styled.div`
   }
 `;
 
-const ContentBox = styled.div`
+const ContentBox = styled.section`
   padding: 10px 0 20px;
   width: 100%;
   @media (min-width: 1px) and (max-width: 480px) {
@@ -89,10 +89,12 @@ const Fab = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: black;
+  border: solid 2px black;
+  background-color: white;
   color: white;
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
 
   position: absolute;
   bottom: 20px;
@@ -183,7 +185,7 @@ const App = () => {
         </Footer>
       </ContentsAndFooter>
       <Fab onClick={gotoTop}>
-        <Icons.ArrowUp />
+        <Icons.ArrowUp color="black" />
       </Fab>
     </MainContainer>
   );

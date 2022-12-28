@@ -25,7 +25,7 @@ const SkillsRow = styled.div`
   }
 `;
 
-const SkillsType = styled.div`
+const SkillsType = styled.h2`
   width: 110px;
   min-width: 110px;
   font-size: 1.6rem;

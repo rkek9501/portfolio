@@ -11,7 +11,7 @@ const ContentsContainer = styled.div`
   color: black;
 `;
 
-const ContentTitle = styled.div`
+const ContentTitle = styled.h1`
   margin: 10px;
   font-size: 2.4rem;
   font-weight: bold;
@@ -70,7 +70,7 @@ const Projects = () => {
     <ContentTitle>Projects</ContentTitle>
     {ProjectDatas.map((project: ProjectType, i: number) => <ProjectContainer key={i}>
       <div className="title" >
-        {project.title}
+        <h2>{project.title}</h2>
         {project.img && <img
           className="project-img"
           alt={project.title}
@@ -79,10 +79,10 @@ const Projects = () => {
       </div>
 
       <ProjectInfoContainer>
-        <div className="description">{project.description}</div>
+        <p className="description">{project.description}</p>
         <br/>
 
-        {project.github && <div className="description">
+        {project.github && <p className="description">
           - Github :&nbsp;
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_github", label: `project_${project.title}`, value: project.github||"" });
@@ -91,9 +91,9 @@ const Projects = () => {
               {project.github}
             </a>
           </div>
-        </div>}
+        </p>}
 
-        {project.url && <div className="description">
+        {project.url && <p className="description">
           - URL :&nbsp;
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_link", label: `project_${project.title}`, value: project.url||"" });
@@ -102,11 +102,11 @@ const Projects = () => {
               {project.url}
             </a>
           </div>
-        </div>}
+        </p>}
 
-        <div className="description">
+        <p className="description">
           <Skills skills={project.skills} label="- Skills : " />
-        </div>
+        </p>
       </ProjectInfoContainer>
     </ProjectContainer>)}
   </ContentsContainer>;
