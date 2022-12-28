@@ -39,7 +39,8 @@ const ProjectDatas: ProjectType[] = [{
   img: `${process.env.PUBLIC_URL}/imgs/portfolio.webp`,
   skills: [
     "Typescript", "React", "Github(Pages)",
-    // "Google-Analytics", "Google-Search-Console"
+    "Google-Analytics",
+    // "Google-Search-Console"
   ]
 }];
 

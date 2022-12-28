@@ -48,8 +48,17 @@ const Footer = styled.div`
   color: white;
   background-color: black;
   padding: 10px 200px;
+
+  .lineDivider {
+    display: inline;
+  }
   @media (min-width: 1px) and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 10px 20px;
+    .lineDivider {
+      display: none;
+    }
   }
   @media (min-width: 481px) and (max-width: 1000px) {
     padding: 10px 60px;
@@ -58,7 +67,7 @@ const Footer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px 10px;
+    margin: 4px 10px;
   }
 `;
 
@@ -145,25 +154,31 @@ const App = () => {
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "click_email", label: "footer", value: "email" });
           }}>
-            <a href="mailto:rkek9501@gmail.com">rkek9501@gmail.com&nbsp;<Icons.Email size={14}/></a>
+            <a href="mailto:rkek9501@gmail.com"><Icons.Email size={14}/>&nbsp;rkek9501@gmail.com</a>
           </div>
-          &nbsp;|&nbsp;
+
+          <div className="lineDivider">&nbsp;|&nbsp;</div>
+
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "click_phone", label: "footer", value: "phone call" });
           }}>
-            <a href="tel://+821087471647">010-8747-1647&nbsp;<Icons.Phone size={14}/></a>
+            <a href="tel://+821087471647"><Icons.Phone size={14}/>&nbsp;010-8747-1647</a>
           </div>
-          &nbsp;|&nbsp;
+
+          <div className="lineDivider">&nbsp;|&nbsp;</div>
+
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_blog", label: "footer", value: "de-er.link" });
           }}>
-            <a href="https://de-er.link/" target="_blank">Blog&nbsp;<Icons.Link size={14}/></a>
+            <a href="https://de-er.link/" target="_blank"><Icons.Link size={14}/>&nbsp;Blog</a>
           </div>
-          &nbsp;|&nbsp;
+
+          <div className="lineDivider">&nbsp;|&nbsp;</div>
+
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_github", label: "footer", value: "github" });
           }}>
-            <a href="https://github.com/rkek9501" target="_blank">Github&nbsp;<Icons.Link size={14}/></a>
+            <a href="https://github.com/rkek9501" target="_blank"><Icons.Link size={14}/>&nbsp;Github</a>
           </div>
         </Footer>
       </ContentsAndFooter>
