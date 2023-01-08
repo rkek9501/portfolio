@@ -38,7 +38,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     </>,
     skills: ["Javascript", "React-Native", "Expo", "Sentry"]
   }, {
-    label: "스마트 오피스 프로젝트(개인)",
+    label: "스마트 오피스 프로젝트(시내 개인 프로젝트)",
     period: "2019.06 ~ 2019.07",
     text: <>
       - Slack을 활용한 사내 냉난방기기 제어<br/>
@@ -77,10 +77,10 @@ const CareerData: CareerOfCompanyData[]  = [{
     period: "2020.05 ~ 2021.04",
     text: <>
       유심개통부터 요금조회, 요금납부 등을 비대면으로 처리하기 위한 키오스크 개발<br/>
-      - 유심(LGU+, 알뜰폰) (선/후불)개통 기능 개발<br/>
+      - LGU+의 유심(+ 알뜰폰) (선/후불)개통 기능 개발<br/>
       - LGU+ 내부 API, ESB 연동<br/>
       - 기존 광고 솔루션과 키오스크 페이지 통신 연동<br/>
-      - 키오스크와 모듈간 통신 연동<br/>
+      - 키오스크와 모듈(카드리더기, 유심리더기, 유심배출기 등)간 통신 인터페이스 정의 및 연동<br/>
       - 번역 기능 개발<br/>
       - 관리자 개통 통계 페이지 개발<br/>
     </>,
@@ -91,7 +91,8 @@ const CareerData: CareerOfCompanyData[]  = [{
     text: <>
       - 기존 솔루션을 내부망에서 동작하도록 리뉴얼<br/>
       &emsp;(관리자 페이지 / 디스플레이 PC 앱)<br/>
-      &emsp; - Amazon ECS를 통한 Docker 배포 환경구성<br/>
+      &emsp; - 내부망 서버PC에 쉬운 환경(linux, mysql, nodejs 등) 세팅을 위해 Amazon ECS를 이용한 Docker 배포 환경구성<br/>
+      &emsp; - 기존 미리보기 서비스로인해 서버에서 chrome headless 브라우저를 실행해두던 것을 요청시에 실행하고 종료하도록 개선<br/>
     </>,
     skills: ["Javascript", "React", "Electron", "Nodejs", "Mysql", "Docker", "Nginx", "Redis"]
   }, {
@@ -112,6 +113,7 @@ const CareerData: CareerOfCompanyData[]  = [{
       - Nextjs 기반의 전체적인 관리자용 페이지 개발 담당<br/>
       - 관리자용 Windows 앱(Electron) 개발<br/>
         &emsp; - 영상 인코딩 기능 개발<br/>
+        &emsp;&emsp; 기존에는 서버에서 동작하던 인코딩 작업을 서버의 부하를 줄이기 위해 클라이언트에서 동작가능하도록 개선<br/>
       - Github 워크프로우를 통한 서버 자동 배포 환경 구성<br/>
     </>,
     skills: ["Typescript", "Nextjs", "Apollo-Graphql", "Github", "Jira", "Storybook", "Electron"]

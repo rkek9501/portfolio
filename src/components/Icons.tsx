@@ -43,8 +43,6 @@ const Phone = ({ size, color }: IconProps) => <DefaultSvg size={size}>
   />
 </DefaultSvg>
 
-
-
 export default {
   Link,
   Email,
