@@ -38,7 +38,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     </>,
     skills: ["Javascript", "React-Native", "Expo", "Sentry"]
   }, {
-    label: "스마트 오피스 프로젝트(시내 개인 프로젝트)",
+    label: "스마트 오피스 프로젝트(사내 개인 프로젝트)",
     period: "2019.06 ~ 2019.07",
     text: <>
       - Slack을 활용한 사내 냉난방기기 제어<br/>

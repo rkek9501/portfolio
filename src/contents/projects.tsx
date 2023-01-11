@@ -58,6 +58,9 @@ const ProjectInfoContainer = styled.div`
     display: flex;
     flex-direction: row;
   }
+  a:hover {
+    text-decoration: underline;
+  }
   @media (min-width: 1px) and (max-width: 1000px) {
     margin-top: 0;
     margin-left: 0;
@@ -82,6 +85,17 @@ const Projects = () => {
         <p className="description">{project.description}</p>
         <br/>
 
+        {project.url && <p className="description">
+          - Link :&nbsp;
+          <div onClick={() => {
+            gtag.event({ action: "click_link", category: "move_to_link", label: `project_${project.title}`, value: project.url||"" });
+          }}>
+            <a href={project.url} target="_blank">
+              {project.url}
+            </a>
+          </div>
+        </p>}
+
         {project.github && <p className="description">
           - Github :&nbsp;
           <div onClick={() => {
@@ -89,17 +103,6 @@ const Projects = () => {
           }}>
             <a href={project.github} target="_blank">
               {project.github}
-            </a>
-          </div>
-        </p>}
-
-        {project.url && <p className="description">
-          - URL :&nbsp;
-          <div onClick={() => {
-            gtag.event({ action: "click_link", category: "move_to_link", label: `project_${project.title}`, value: project.url||"" });
-          }}>
-            <a href={project.url} target="_blank">
-              {project.url}
             </a>
           </div>
         </p>}
