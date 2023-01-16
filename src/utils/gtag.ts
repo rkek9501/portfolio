@@ -1,4 +1,4 @@
-type EventTypes = {
+export type EventTypes = {
   action: string;
   category: string;
   label: string;

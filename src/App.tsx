@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "@components/Header";
 import Icons from "@components/Icons";
 import { AboutMe, Career, Skills, Projects } from "@contents/index";
+import { Blog, Email, Github, LinkType, Phone } from "@datas/links";
 import * as gtag from "@utils/gtag";
 
 const MainContainer = styled.div`
@@ -107,6 +108,34 @@ const Fab = styled.div`
   }
 `;
 
+const LinkContainer = styled.div`
+  a {
+    text-decoration: underline;
+    color: white;
+    &:hover {
+      color: gray;
+      svg path {
+        fill: gray;
+      }
+    }
+    svg {
+      margin-right: 2px;
+      &:hover {
+        fill: gray;
+      }
+    }
+  }
+`;
+
+const FooterLink = (Props: LinkType) => {
+  return <LinkContainer onClick={() => gtag.event(Props.event)}>
+    <a href={Props.href} target={Props.type === "contact" ? "_self" : "_blank"}>
+      {Props.icon}
+      {Props.type === "contact" ? Props.text : Props.label}
+    </a>
+  </LinkContainer>
+};
+
 const App = () => {
   const [hiddenHeader, setHiddenHeader] = useState(false);
   const contentLoaded = useRef(null);
@@ -153,35 +182,13 @@ const App = () => {
         </MainContentsArea>
 
         <Footer>
-          <div onClick={() => {
-            gtag.event({ action: "click_link", category: "click_email", label: "footer", value: "email" });
-          }}>
-            <a href="mailto:rkek9501@gmail.com"><Icons.Email size={14}/>&nbsp;rkek9501@gmail.com</a>
-          </div>
-
+          <FooterLink {...Email}/>
           <div className="lineDivider">&nbsp;|&nbsp;</div>
-
-          <div onClick={() => {
-            gtag.event({ action: "click_link", category: "click_phone", label: "footer", value: "phone call" });
-          }}>
-            <a href="tel://+821087471647"><Icons.Phone size={14}/>&nbsp;010-8747-1647</a>
-          </div>
-
+          <FooterLink {...Phone}/>
           <div className="lineDivider">&nbsp;|&nbsp;</div>
-
-          <div onClick={() => {
-            gtag.event({ action: "click_link", category: "move_to_blog", label: "footer", value: "de-er.link" });
-          }}>
-            <a href="https://de-er.link/" target="_blank"><Icons.Link size={14}/>&nbsp;Blog</a>
-          </div>
-
+          <FooterLink {...Blog}/>
           <div className="lineDivider">&nbsp;|&nbsp;</div>
-
-          <div onClick={() => {
-            gtag.event({ action: "click_link", category: "move_to_github", label: "footer", value: "github" });
-          }}>
-            <a href="https://github.com/rkek9501" target="_blank"><Icons.Link size={14}/>&nbsp;Github</a>
-          </div>
+          <FooterLink {...Github}/>
         </Footer>
       </ContentsAndFooter>
       <Fab onClick={gotoTop}>
