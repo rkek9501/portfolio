@@ -19,7 +19,7 @@ const ContentTitle = styled.h1`
 
 const ProjectContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: solid 1px lightgray;
   padding: 10px 20px 20px;
   margin-bottom: 20px;
@@ -39,17 +39,12 @@ const ProjectContainer = styled.div`
   }
   @media (min-width: 1px) and (max-width: 1000px) {
     flex-direction: column;
-    .title {
-      width: 100%;
-    }
   }
 `;
 const ProjectInfoContainer = styled.div`
   width: 100%;
   min-height: 100px;
-  padding: 10px 20px;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 10px;
   font-size: 1.4rem;
   .description {
     display: inline-flex;
@@ -58,13 +53,12 @@ const ProjectInfoContainer = styled.div`
     display: flex;
     flex-direction: row;
   }
-  a:hover {
+  a {
     text-decoration: underline;
-  }
-  @media (min-width: 1px) and (max-width: 1000px) {
-    margin-top: 0;
-    margin-left: 0;
-    padding: 10px 0;
+    color: gray;
+    &:hover {
+      color: black;
+    }
   }
 `;
 
@@ -74,11 +68,11 @@ const Projects = () => {
     {ProjectDatas.map((project: ProjectType, i: number) => <ProjectContainer key={i}>
       <div className="title" >
         <h2>{project.title}</h2>
-        {project.img && <img
+        {/* {project.img && <img
           className="project-img"
           alt={project.title}
           src={project.img}
-        />}
+        />} */}
       </div>
 
       <ProjectInfoContainer>
