@@ -44,7 +44,7 @@ const AboutMe = () => {
     </ImageContainer>
     <InfoContainer>
       안녕하세요.<br/>
-      웹 서비스 개발자 '<b>정도영</b>'입니다.<br/>
+      현실에 안주하지 않고 늘 발전하는 '<b>정도영</b>'입니다.
     </InfoContainer>
   </AboutMeContainer>;
 };
