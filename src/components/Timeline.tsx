@@ -70,7 +70,7 @@ const Line = styled.div`
   margin: 0 15px;
   background-color: lightgray;
 `;
-const Text = styled.p`
+const Text = styled.div`
   padding-left: 16px;
   padding-bottom: 4px;
   .part {

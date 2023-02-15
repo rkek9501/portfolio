@@ -76,10 +76,10 @@ const Projects = () => {
       </div>
 
       <ProjectInfoContainer>
-        <p className="description">{project.description}</p>
+        <div className="description">{project.description}</div>
         <br/>
 
-        {project.url && <p className="description">
+        {project.url && <div className="description">
           - Link :&nbsp;
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_link", label: `project_${project.title}`, value: project.url||"" });
@@ -88,9 +88,9 @@ const Projects = () => {
               {project.url}
             </a>
           </div>
-        </p>}
+        </div>}
 
-        {project.github && <p className="description">
+        {project.github && <div className="description">
           - Github :&nbsp;
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_github", label: `project_${project.title}`, value: project.github||"" });
@@ -99,11 +99,11 @@ const Projects = () => {
               {project.github}
             </a>
           </div>
-        </p>}
+        </div>}
 
-        <p className="description">
+        <div className="description">
           <Skills skills={project.skills} label="- Skills : " />
-        </p>
+        </div>
       </ProjectInfoContainer>
     </ProjectContainer>)}
   </ContentsContainer>;

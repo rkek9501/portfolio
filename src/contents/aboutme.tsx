@@ -52,7 +52,7 @@ const IntroduceContainer = styled.div`
   }
 `;
 
-const Introduce = styled.p`
+const Introduce = styled.div`
   display: block;
   text-align: center;
   font-size: 1.5rem;
