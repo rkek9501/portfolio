@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback, useMemo } from "react";
+import React, { useState, useRef, useCallback, useMemo, useEffect } from "react";
 import styled from "styled-components";
 
 import Header from "@components/Header";
@@ -10,7 +10,7 @@ import * as gtag from "@utils/gtag";
 
 const MainContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   overflow-y: none;
@@ -149,6 +149,12 @@ const App = () => {
       setHiddenHeader(false);
     }
   }, [contentLoaded]);
+
+  useEffect(() => {
+    // 현재 뷰포트의 크기를 가져와 --vh 속성 추가
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, [])
 
   useInitialScrollByHash(() => {
     setHiddenHeader(true);

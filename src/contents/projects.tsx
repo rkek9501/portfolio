@@ -80,10 +80,10 @@ const Projects = () => {
         <br/>
 
         {project.url && <div className="description">
-          - Link :&nbsp;
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_link", label: `project_${project.title}`, value: project.url||"" });
           }}>
+            <span>- Link :&nbsp;</span>
             <a href={project.url} target="_blank">
               {project.url}
             </a>
@@ -91,10 +91,10 @@ const Projects = () => {
         </div>}
 
         {project.github && <div className="description">
-          - Github :&nbsp;
           <div onClick={() => {
             gtag.event({ action: "click_link", category: "move_to_github", label: `project_${project.title}`, value: project.github||"" });
           }}>
+            <span>- Github :&nbsp;</span>
             <a href={project.github} target="_blank">
               {project.github}
             </a>

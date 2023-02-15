@@ -1,14 +1,9 @@
 html {
   font-size: 62.5%;
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 1px) and (max-width: 768px) {
   html {
     font-size: 56%;
-  }
-}
-@media (min-width: 1px) and (max-width: 480px) {
-  html {
-    font-size: 50%;
   }
 }
 body {

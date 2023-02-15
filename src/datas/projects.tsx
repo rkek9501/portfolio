@@ -25,8 +25,8 @@ const ProjectDatas: ProjectType[] = [{
     "Typescript",
     "React", "Nextjs", // "styled-components",
     "Nodejs", "Express", "Sqlite",
-    "Nginx", "PM2", "AWS(EC2, RDS, Route53, ect...)",
-    "Figma", "Github",
+    "Nginx", "PM2", "Figma",
+    "AWS(EC2, RDS, Route53, ect...)",
     "Google-Analytics", "Google-Search-Console",
   ]
 }, {
