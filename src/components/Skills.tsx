@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import type { SkillType } from '@datas/skills';
+import Logos from './Logos';
 
 const SkillTag = styled.span`
   display: inline-block;
   width: fit-content;
+  max-height: 30px;
   font-size: 1.2rem;
   color: black;
   border: solid 1px black;
@@ -16,7 +18,7 @@ const SkillTag = styled.span`
   & > * {
     vertical-align: text-top;
   }
-  img {
+  svg {
     display: inline-block;
     height: 1.4rem;
     width: auto;
@@ -46,16 +48,9 @@ const SkillsContainer = styled.div`
 `;
 
 export const Skill = (Props: SkillType) => {
-  const icon = Props.icon ?? `${Props.name.toLowerCase()}.svg`;
+  const icon = Props.icon ?? `${Props.name.toLowerCase()}`;
   return <SkillTag>
-    {!Props.withoutIcon && <img
-      height="1.4rem"
-      alt={Props.name}
-      src={`${process.env.PUBLIC_URL}/icons/${icon}`}
-      onError={(e: any) => {
-        e.target.style = "display: none;";
-      }}
-    />}
+    {!Props.withoutIcon && <Logos name={icon} />}
     {Props.name}
   </SkillTag>
 };
@@ -67,7 +62,7 @@ const Skills = (Props: { skills?: string[]; withoutIcon?: boolean; label?: strin
       {Props.skills?.map((skill: string, i: number) => {
         const splitStartIdx = skill.indexOf("(");
         const splitEndIdx = skill.indexOf(")");
-        let icon = `${skill.toLowerCase()}.svg`
+        let icon = skill.toLowerCase();
         if (splitStartIdx !== -1 && splitEndIdx !== -1) {
           icon = icon.slice(0, splitStartIdx) + icon.slice(splitEndIdx+1);
         }
