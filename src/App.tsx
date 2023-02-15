@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "@components/Header";
 import Icons from "@components/Icons";
 import { AboutMe, Career, Skills, Projects } from "@contents/index";
+import { useInitialScrollByHash } from "@hooks";
 import { Blog, Email, Github, LinkType, Phone } from "@datas/links";
 import * as gtag from "@utils/gtag";
 
@@ -149,10 +150,13 @@ const App = () => {
     }
   }, [contentLoaded]);
 
+  useInitialScrollByHash(() => {
+    setHiddenHeader(true);
+  }, 100);
+
   return (
     <MainContainer>
       <Header top={top} setHiddenHeader={setHiddenHeader} />
-
       <ContentsAndFooter
         id="main-contents"
         ref={contentLoaded}
