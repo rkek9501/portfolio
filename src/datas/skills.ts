@@ -58,11 +58,6 @@ export const SkillData: SkillDataType[] = [{
     { name: "AWS" }
   ]
 }, {
-  name: "Certification",
-  list: [
-    { name: "정보처리기사" }
-  ]
-}, {
   name: "Others",
   list: [
     { name: "Arduino" },

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Header from "@components/Header";
 import Icons from "@components/Icons";
-import { AboutMe, Career, Skills, Projects } from "@contents/index";
+import { AboutMe, Career, Skills, Projects, Certificates } from "@contents/index";
 import { useInitialScrollByHash } from "@hooks";
 import { Blog, Email, Github, LinkType, Phone } from "@datas/links";
 import * as gtag from "@utils/gtag";
@@ -188,6 +188,10 @@ const App = () => {
           <Divider />
           <ContentBox id="skills" className="my-skills">
             <Skills/>
+          </ContentBox>
+          <Divider />
+          <ContentBox id="certificates" className="my-certificates">
+            <Certificates/>
           </ContentBox>
         </MainContentsArea>
 
