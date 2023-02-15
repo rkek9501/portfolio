@@ -70,7 +70,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     text: <>
       - Slack을 활용한 사내 냉난방기기 제어<br/>
       &emsp;(Slack의 메세지 수신시 Arduino를 통해 냉난방 신호 송신)<br/>
-      - 약 3개월간 일주일에 한번씩 진행한 사내 프로젝트<br/>
+      - 약 2개월간 일주일에 한번씩 진행한 사내 프로젝트<br/>
     </>,
   }, {
     label: "동물용 의약품 관리자교육 예약 및 관리 프로젝트",
