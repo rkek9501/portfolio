@@ -4,11 +4,12 @@ export type SkillType = {
   withoutIcon?: boolean;
 }
 export type SkillDataType = {
-  name: string;
+  name: string | null;
   list: SkillType[]
 }
 
 export const SkillData: SkillDataType[] = [{
+/*
   name: "Main Language",
   list: [
     { name: "HTML" },
@@ -67,5 +68,26 @@ export const SkillData: SkillDataType[] = [{
     { name: "Slack" },
     { name: "Zeplin" },
     { name: "Figma" }
+  ]
+}, {
+*/
+  name: null,
+  list: [
+    { name: "JavaScript" },
+    { name: "TypeScript" },
+    { name: "React" },
+    { name: "React-Native" },
+    { name: "NextJs" },
+    { name: "NodeJS" },
+    { name: "Express" },
+    { name: "GraphQL" },
+    { name: "MySQL" },
+    { name: "Git" },
+    { name: "Docker" },
+    { name: "AWS" },
+    { name: "Notion" },
+    { name: "JIRA" },
+    { name: "Slack" },
+    { name: "JIRA" }
   ]
 }];

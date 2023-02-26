@@ -5,11 +5,17 @@ import * as gtag from "@utils/gtag";
 import { Blog, Email, Github, LinkType, Phone, ProfileImgSrc } from '@datas/links';
 
 const AboutMeContainer = styled.div`
-  margin-top: 30px;
+  /* margin-top: 30px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
+
+const ContentTitle = styled.h1`
+  margin: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+`;
+
 const ImageContainer = styled.div`
   display: flex;
   max-width: 50vw;
@@ -115,6 +121,7 @@ const Link = (Props: LinkType) => {
 
 const AboutMe = () => {
   return <AboutMeContainer>
+    <ContentTitle>About Me</ContentTitle>
     <IntroduceContainer>
       <ImageContainer>
         <img src={ProfileImgSrc} alt="profile" width={100} height={100} />

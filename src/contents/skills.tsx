@@ -57,8 +57,10 @@ const Skills = () => {
     <SkillsContainer>
       {SkillData.map((row, i) => {
         return <SkillsRow key={i}>
-        <SkillsType>{row.name}</SkillsType>
-        <Divider/>
+        {row.name && <>
+          <SkillsType>{row.name}</SkillsType>
+          <Divider/>
+        </>}
         <SkillsList>
           {row.list.map((skill: SkillType, j) =>{
             return <Fragment key={j}>

@@ -123,8 +123,6 @@ const Timeline = (props: { datas: CareerOfCompanyData[] }) => {
             </TimelineTitleRow>
 
             <CareerRow label='기간' text={career.period} />
-            <CareerRow label='주요 업무' text={career.work} />
-            <CareerRow label='담당 역할' text={career.part} />
             <CareerRow label='기술 스택' text={career.skills?.join(", ")} />
             <CareerRow label='개발 인원' text={career.persons ? `${career.persons}명` : null} />
             
