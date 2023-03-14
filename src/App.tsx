@@ -161,7 +161,7 @@ const App = () => {
   }, 100);
 
   return (
-    <MainContainer>
+    <MainContainer suppressHydrationWarning={true}>
       <Header top={top} setHiddenHeader={setHiddenHeader} />
       <ContentsAndFooter
         id="main-contents"

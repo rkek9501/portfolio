@@ -29,8 +29,8 @@ const CertificatesInfo = styled.div`
 `;
 
 const CertificatesList = () => {
-  return <>{CertificateData.map((item: CertificatesType) => {
-    return <CertificatesWrapper>
+  return <>{CertificateData.map((item: CertificatesType, i: number) => {
+    return <CertificatesWrapper key={i}>
       <CertificatesName>
         {item.name}
       </CertificatesName>
