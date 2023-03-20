@@ -47,17 +47,17 @@ const CareerData: CareerOfCompanyData[]  = [{
   }, {
     label: "브라우저 기반의 주류광고 플랫폼 개발",
     period: "2019.04 ~ 2019.07 (약 4개월)",
-    skills: ["Javascript", "React Native", "Expo", "Git", "Sentry"],
+    skills: ["Javascript", "React-Native", "Expo", "Git", "Sentry"],
     persons: 3,
     text: <>
-      <b>애플리케이션(주고) 개발</b><br/>
+      <b>애플리케이션(주고) 개발 (Android / iOS)</b><br/>
       • 주류 주문, 장바구니 및 주문 통계 개발<br/>
       • 크래시 리포트 Sentry 연동 및 관리<br/>
     </>,
   }, {
     label: "스마트 오피스 프로젝트(사내 개인 프로젝트)",
     period: "2019.06 ~ 2019.07 (약 2개월)",
-    skills: ["Arduino", "C#"],
+    skills: ["Arduino"],
     persons: 1,
     text: <>
       <b>아두이노를 통한 냉난방기기 제어</b>
@@ -138,13 +138,13 @@ const CareerData: CareerOfCompanyData[]  = [{
   }, {
     label: "신규 솔루션 개발",
     period: "2022.03 ~ 2022.08 (약 6개월)",
-    skills: ["Typescript", "Nextjs", /*"styled-component", "tailwindCSS", "PostCSS",*/ "Github", "Jira"],
+    skills: ["Typescript", "Nextjs", "Electron", /*"styled-component", "tailwindCSS", "PostCSS",*/ "Github", "Jira"],
     persons: 5,
     text: <>
-      <b>Front-End 개발 리드</b>
+      <b>Front-End 개발 리드</b><br/>
       • Next.js 기반의 관리자용 페이지 개발 담당<br/>
       • 테스트, 빌드 및 배포 시간 단축 (20분 → 5분)<br/>
-      &emsp;- Github 워크플로우를 통한 서버 자동 배포 환경 구성<br/>
+      &emsp;- Github 워크플로우를 통한 CI/CD 환경 구성<br/>
       • 영상 인코딩 프로세스 개선<br/>
       {/* &emsp; 기존에는 서버에서 동작하던 인코딩 작업을 서버의 부하를 줄이기 위해 클라이언트에서 동작가능하도록 개선<br/> */}
     </>
