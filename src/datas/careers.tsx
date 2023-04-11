@@ -23,7 +23,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     • 템플릿 미리보기 기능 개선<br/>
     • 내부망 납품용 서버PC 세팅 시간 최소화<br/>
     &emsp;- 납품용 내부망 서버PC에 쉽게 환경 세팅을 하기 위한 Docker 배포 환경구성<br/>
-    • 서버 테스트,빌드 및 배포 시간 단축 (20분 → 5분)<br/>
+    • 서버 테스트,빌드 및 배포 환경 구축<br/>
   </>,
   mainWork: <>
     • 웹 서버 개발 (NodeJs)<br/>
@@ -108,7 +108,7 @@ const CareerData: CareerOfCompanyData[]  = [{
       • API, ESB 연동<br/>
       &emsp;1. LGU+ 내부 API, ESB 연동 중개 서버 개발<br/>
       &emsp;2. 알뜰폰 결제 API 연동<br/>
-      • 관리자 홈페이지 개통 통계 페이지 개발<br/>
+      • 관리자 홈페이지 개통 통계 기능 개발<br/>
       • 페이지 방문 기록 관리 및 저장 기능 개발<br/>
     </>,
   }, {
@@ -128,7 +128,7 @@ const CareerData: CareerOfCompanyData[]  = [{
     skills: ["Javascript", "React", "Git", "Android(Native)", "Mysql", "Mssql"],
     persons: 3,
     text: <>
-      <b>기존 솔루션에서 추가적인 건물 BEMS용 템플릿 제작</b><br/>
+      <b>회사 솔루션과 건물 BEMS용 템플릿 연동</b><br/>
       • 외부 API연동<br/>
       • 건물 BEMS, 주차 정보 조회, 공공데이터 포털 날씨 API연동<br/>
       • 건물 매장정보 및 길찾기 데이터베이스 설계 및<br/>
@@ -138,15 +138,15 @@ const CareerData: CareerOfCompanyData[]  = [{
   }, {
     label: "신규 솔루션 개발",
     period: "2022.03 ~ 2022.08 (약 6개월)",
-    skills: ["Typescript", "Nextjs", "Electron", /*"styled-component", "tailwindCSS", "PostCSS",*/ "Github", "Jira"],
+    skills: ["Typescript", "Nextjs", "Electron", "styled-component", "Jest", /* "tailwindCSS", "PostCSS",*/ "Github", "Jira"],
     persons: 5,
     text: <>
+      <b>Lite 버전의 B2C, B2B용 디지털 사이니지 솔루션 개발</b><br/>
       <b>Front-End 개발 리드</b><br/>
       • Next.js 기반의 관리자용 페이지 개발 담당<br/>
-      • 테스트, 빌드 및 배포 시간 단축 (20분 → 5분)<br/>
+      • 서버 테스트,빌드 및 배포 환경 구축<br/>
       &emsp;- Github 워크플로우를 통한 CI/CD 환경 구성<br/>
       • 영상 인코딩 프로세스 개선<br/>
-      {/* &emsp; 기존에는 서버에서 동작하던 인코딩 작업을 서버의 부하를 줄이기 위해 클라이언트에서 동작가능하도록 개선<br/> */}
     </>
   }]
 }];

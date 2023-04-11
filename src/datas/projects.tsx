@@ -23,7 +23,8 @@ const ProjectDatas: ProjectType[] = [{
   img: `${process.env.PUBLIC_URL}/imgs/deer.webp`,
   skills: [
     "Typescript",
-    "React", "Nextjs", // "styled-components",
+    "React", "Nextjs", "Styled-Components",
+    "SWR", "Context API",
     "Nodejs", "Express", "Sqlite",
     "Nginx", "PM2", "Figma",
     "AWS(EC2, RDS, Route53, ect...)",
